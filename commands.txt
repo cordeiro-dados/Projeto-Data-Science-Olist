@@ -1,0 +1,11 @@
+comandos:
+
+1 - criar o ambiente usando o conda
+    * conda create --name olist-env python=3.
+
+2 - para ativar o ambiente
+    * conda activate olist-env
+    ** caso não funcione, use o comando: source activate olist-env
+
+3 - para desativar o ambiente
+    * conda deactivate

@@ -1,0 +1,1 @@
+SELECT * FROM tb_seller_sgmt LIMIT 100;

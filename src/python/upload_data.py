@@ -12,8 +12,6 @@ port = '3306'
 # conexão com mysql
 # str_connection = 'mysql+pymysql://{user}:{psw}@{host}:{port}'
 
-# caminho da conexão local
-str_connection = 'sqlite:///{path}'
 
 
 # para identificar o caminho do pai do arquivo atual
@@ -25,10 +23,11 @@ DATA_DIR = os.path.join(BASE_DIR, 'data')
 # Forma 2, realiza a mesma coisa, porém de forma mais elegante, esse método se chama Compressão de Listas
 files_names = [i for i in os.listdir( DATA_DIR ) if i.endswith('.csv')]
 
+# caminho da conexão local
+str_connection = 'sqlite:///{path}'
 # Criando a conexãol
 str_connection = str_connection.format( path=os.path.join( DATA_DIR, 'olist.db') )
 # str_connection = str_connection.format( user=user, psw=psw, host=host, port=port )
-
 # Abrindo a conexão com o banco de dados
 connection = sqlalchemy.create_engine( str_connection )
 
